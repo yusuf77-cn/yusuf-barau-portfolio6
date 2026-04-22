@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login_signup.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="login_signup.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="login-form" class="containers">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+           <a href="index.html"><button type="submit" id="login-btn" onclick="login()">Login</button></a> 
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+    <br><br><br>
+    <div class="second-container">
+                <h1>Sign In</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Email:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="password">D.O.B:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+             <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+             <a href="index.html"><button type="submit">Signup</button></a>
+        </form>
+        <div class="message" id="message"></div>
+        
+    </div>
+</body>
+</html>

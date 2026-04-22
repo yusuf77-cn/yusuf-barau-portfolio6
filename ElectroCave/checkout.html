@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="description" content="Checkout page for furniture store" />
+    <meta name="keywords" content="furniture, ecommerce, checkout" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/tiny-slider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Checkout | Furni Store</title>
+
+    <style>
+        .btn-black {
+            background-color: #333;
+            color: white;
+        }
+        .btn-black:hover {
+            background-color: #555;
+        }
+        .input-error {
+            border-color: red;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Furni navigation bar">
+        <div class="container">
+			<a class="navbar-brand" href="index.html"><img src="pimages/logo.gif" alt="logo"></a>
+            <!-- <a class="navbar-brand" href="index.html">Furni<span>.</span></a> -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="about.html">About us</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact us</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="login_signup.html"><img src="images/user.svg" alt="Login"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="images/cart.svg" alt="Cart"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header/Navigation -->
+
+    <!-- Start Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Checkout</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <div class="untree_co-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="border p-4 rounded" role="alert">
+                        Returning customer? <a href="login_signup.html" style="text-align: center; text-decoration: dotted;">Click here</a> to login.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Billing Details Section -->
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <h2 class="h3 mb-3 text-black">Billing Details</h2>
+                    <div class="p-3 p-lg-5 border bg-white">
+                        <form id="checkoutForm" onsubmit="return validateForm()">
+                            <div class="form-group">
+                                <label for="c_country" class="text-black">Country <span class="text-danger">*</span></label>
+                                <select id="c_country" class="form-control" required>
+                                    <option value="">Select a country</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Ghana">Ghana</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="Gambia">Gambia</option>
+                                    <option value="Rwanda">Rwanda</option>
+                                    <option value="USA">USA</option>
+                                    <option value="UK">UK</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="c_fname" name="c_fname" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="c_lname" name="c_lname" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="c_address" class="text-black">Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="c_state_country" class="text-black">State / Country <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="c_state_country" name="c_state_country" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="c_postal_zip" class="text-black">Postal / Zip Code <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-5">
+                                <div class="col-md-6">
+                                    <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="c_email_address" name="c_email_address" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="c_phone" class="text-black">Phone</label>
+                                    <input type="tel" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="c_create_account" class="text-black" data-bs-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account">
+                                    <input type="checkbox" value="1" id="c_create_account"> Create an account?
+                                </label>
+                                <div class="collapse" id="create_an_account">
+                                    <div class="py-2 mb-4">
+                                        <p class="mb-3">Create an account by entering the information below.</p>
+                                        <div class="form-group">
+                                            <label for="c_account_password" class="text-black">Account Password</label>
+                                            <input type="password" class="form-control" id="c_account_password" name="c_account_password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="c_ship_different_address" class="text-black" data-bs-toggle="collapse" href="#ship_different_address" role="button" aria-expanded="false" aria-controls="ship_different_address">
+                                    <input type="checkbox" value="1" id="c_ship_different_address"> Ship to a different address?
+                                </label>
+                                <div class="collapse" id="ship_different_address">
+                                    <div class="py-2">
+                                        <div class="form-group row">
+                                            <div class="col-md-6">
+                                                <label for="c_diff_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="c_diff_fname" name="c_diff_fname">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="c_diff_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="c_diff_lname" name="c_diff_lname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <label for="c_diff_address" class="text-black">Address <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="c_diff_address" name="c_diff_address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="c_order_notes" class="text-black">Order Notes</label>
+                                <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" class="form-control" placeholder="Write your notes here..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Billing Details Section -->
+
+                <!-- Order Summary and Payment Methods Section -->
+                <div class="col-md-6">
+                    <h2 class="h3 mb-3 text-black">Your Order</h2>
+                    <div class="p-3 p-lg-5 border bg-white">
+                        <table class="table site-block-order-table mb-5">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="order-summary-body">
+                                <!-- Cart items will be dynamically added here -->
+                            </tbody>
+                        </table>
+
+                        <!-- Your existing payment methods and other content -->
+
+                        <div class="form-group">
+                           <button  onclick="myButton()" type="submit" class="btn btn-black btn-lg btn-block"><h1 id="demo">Place Order</h1></button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Order Summary and Payment Methods Section -->
+                <!-- End Order Summary and Payment Methods Section -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#c_country, #c_diff_country').select2(); // Initialize country select dropdown with searchable feature
+
+            $('.collapse').on('show.bs.collapse', function () {
+                $('.collapse').not(this).collapse('hide'); // Ensure only one payment method is expanded at a time
+            });
+        });
+
+        function validateForm() {
+            let valid = true;
+
+            // Validate first name and last name fields
+            const firstName = document.getElementById("c_fname").value;
+            const lastName = document.getElementById("c_lname").value;
+
+            if (!firstName) {
+                document.getElementById("c_fname").classList.add("input-error");
+                valid = false;
+            } else {
+                document.getElementById("c_fname").classList.remove("input-error");
+            }
+
+            if (!lastName) {
+                document.getElementById("c_lname").classList.add("input-error");
+                valid = false;
+            } else {
+                document.getElementById("c_lname").classList.remove("input-error");
+            }
+
+            // Add more validations for other fields as required...
+
+            return valid; // Prevent form submission if any field is invalid
+        }
+
+        // Dynamically update cart total
+        function updateCart() {
+            let subtotal = 0;
+            document.querySelectorAll('.cart-item').forEach(function (row) {
+                let quantity = row.querySelector('.item-quantity').value;
+                let price = row.querySelector('.item-price').innerText.replace('$', '');
+                subtotal += quantity * price;
+            });
+            document.querySelector('#cart-subtotal').innerText = '$' + subtotal.toFixed(2);
+            document.querySelector('#cart-total').innerText = '$' + subtotal.toFixed(2);
+        }
+
+        // Coupon code validation (example)
+        document.getElementById("button-addon2").addEventListener("click", function () {
+            let couponCode = document.getElementById("c_code").value;
+            if (couponCode !== "DISCOUNT10") {
+                alert("Invalid coupon code.");
+            } else {
+                alert("Coupon applied!");
+            }
+        });
+
+		document.addEventListener('DOMContentLoaded', function() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            let subtotal = 0;
+            const orderSummaryBody = document.getElementById('order-summary-body');
+
+            cartItems.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.product} <strong class="mx-2">x${item.quantity}</strong></td>
+                    <td>$${item.price.toFixed(2)}</td>
+                `;
+                orderSummaryBody.appendChild(row);
+
+                subtotal += item.quantity * item.price;
+            });
+
+            // Add subtotal and total rows
+            const subtotalRow = document.createElement('tr');
+            subtotalRow.innerHTML = `
+                <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
+                <td>$${subtotal.toFixed(2)}</td>
+            `;
+            orderSummaryBody.appendChild(subtotalRow);
+
+            const totalRow = document.createElement('tr');
+            totalRow.innerHTML = `
+                <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+                <td class="text-black font-weight-bold"><strong>$${subtotal.toFixed(2)}</strong></td>
+            `;
+            orderSummaryBody.appendChild(totalRow);
+        });
+ function myButton(){
+    
+                alert("Invalid Card ");
+    
+ }
+     
+          
+    </script>
+
+</body>
+
+</html>
