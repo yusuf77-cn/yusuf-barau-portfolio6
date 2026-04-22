@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yusuf Barau – Complete professional web designer portfolio with projects, pricing, testimonials, CV download, WhatsApp chat, and dark mode." />
+  <title>Yusuf Barau | Ultimate Web Designer Portfolio</title>
+  <style>
+    :root{--bg:#0f172a;--card:#020617;--primary:#2563eb;--accent:#60a5fa;--text:#e5e7eb;--muted:#94a3b8}
+    body.light{--bg:#f8fafc;--card:#ffffff;--primary:#2563eb;--accent:#2563eb;--text:#020617;--muted:#475569}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    body{background:var(--bg);color:var(--text);line-height:1.7;transition:.3s}
+    a{color:var(--accent);text-decoration:none}
+
+    header{padding:120px 20px;text-align:center;background:linear-gradient(135deg,#2563eb,#1e40af);color:#fff}
+    header h1{font-size:3.6rem}
+    header p{font-size:1.4rem;opacity:.95}
+
+    nav{position:sticky;top:0;background:rgba(2,6,23,.95);padding:15px;text-align:center;z-index:10}
+    body.light nav{background:#fff}
+    nav a{margin:0 10px;font-weight:800}
+    .toggle{float:right;margin-right:20px;cursor:pointer}
+
+    section{padding:90px 20px;max-width:1200px;margin:auto}
+    h2{text-align:center;font-size:2.7rem;margin-bottom:40px}
+    .muted{text-align:center;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .card{background:var(--card);padding:32px;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.3);transition:.3s}
+    .card:hover{transform:translateY(-10px)}
+    .card h3{color:var(--accent)}
+
+    .skills span{display:inline-block;background:#1e293b;color:#fff;padding:10px 18px;border-radius:999px;margin:8px}
+    body.light .skills span{background:#e5e7eb;color:#020617}
+
+    .projects img{width:100%;border-radius:14px;margin-bottom:12px}
+
+    .price{font-size:2.3rem;color:var(--accent)}
+
+    .btn{display:inline-block;padding:14px 40px;background:var(--primary);color:#fff;border-radius:999px;font-weight:900;margin:10px}
+
+    footer{background:var(--card);padding:40px;text-align:center}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Yusuf Barau</h1>
+  <p>Web Designer • UI/UX • Frontend Developer • Graphics Design</p>
+  <a class="btn" href="portfolio2\Business_Proposal_Yusuf_Barau_Updated.pdf">Hire Me</a>
+  <a class="btn" href="portfolio2\BARAU YUSUF ABBA cv.pdf" download>Download CV</a>
+</header>
+
+<nav>
+  <span class="toggle" onclick="toggleMode()">🌓</span>
+  <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+  <a href="#pricing">Pricing</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</nav>
+
+<section id="about"><h2>About Me</h2><p class="muted">I am Yusuf Barau, a professional web designer building fast, modern, responsive websites for businesses and individuals, and a Graphics designer.</p></section>
+
+<section id="services"><h2>Services</h2><div class="grid"><div class="card"><h3>Web Design</h3><p>Modern professional designs.</p></div><div class="card"><h3>Responsive Design</h3><p>Mobile-first layouts.</p></div><div class="card"><h3>UI/UX</h3><p>User-focused experience.</p></div><div class="card"><h3>Redesign</h3><p>Upgrade old websites.</p></div><div class="card"><h3>Graphics Design</h3><p>Creates Logos</p></div></div></section>
+
+<section id="skills"><h2>Skills</h2><div class="skills" style="text-align:center"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Figma</span><span>Git</span><span>SEO</span><span>Graphics Desighn</span></div></section>
+
+<section id="projects" class="projects"><h2>Projects</h2><div class="grid"><div class="card"><a href="my project2/index.html"><h3>eccomerce website 1</h3></a></div><div class="card"><a href="ElectroCave/index.html"><h3>eccomerce website 2</h3></a></div><div class="card"><a href="easybank-landing-page-master/easybank-landing-page-master/index2.html"><h3>Banking Page</h3></a></div><div class="card"><a href="practical/index.html"><h3>FITNESS WEBSITE</h3></a></div></div></section>
+
+<section id="pricing"><h2>Pricing</h2><div class="grid"><div class="card"><h3>Basic</h3><p class="price">$100</p></div><div class="card"><h3>Standard</h3><p class="price">$250</p></div><div class="card"><h3>Premium</h3><p class="price">$500</p></div></div></section>
+
+<section id="testimonials"><h2>Testimonials</h2><div class="grid"><div class="card">"Excellent work and fast delivery." – Client A</div><div class="card">"Very professional designer." – Client B</div></div></section>
+
+<section id="faq"><h2>FAQ</h2><div class="grid"><div class="card">⏱ Delivery: 1 - 3 Weeks</div><div class="card">🛠 Free support after delivery</div></div></section>
+
+<section id="contact" style="text-align:center"><h2>Contact</h2><p>Email: <strong>yusufbarau05@gmail.com</strong></p><p>WhatsApp: <strong>+2348169790319</strong></p><a class="btn" href="https://wa.me/234 816 979 0319">Chat on WhatsApp</a></section>
+
+<footer><p>© 2025 Yusuf Barau. All rights reserved.</p></footer>
+
+<script>
+  function toggleMode(){document.body.classList.toggle('light')}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+
+        form{
+            /* animation: rock 4s infinite; */
+            width: 35%;
+            height: 350%; 
+            border-radius: 20px;
+            border: 7px solid black;
+            text-align: center;
+            margin: auto; 
+            margin-top: 25px;
+            animation: rock 4s infinite;
+        }
+       
+       
+       h2{
+        animation: plane 4s infinite;
+       }
+       @keyframes plane {
+       0%{
+            color: red;
+            transform: translate(-300px) rotateZ(3deg);
+        }
+        50%{
+            color: green;
+            transform: translateY(-20px) rotateZ(1deg);
+        }
+        80%{
+            color: blue;
+            transform: translateX(-10px) rotateZ(0deg);
+        }
+        100%{
+            color: goldenrod;
+            transform: translate3d(200px) rotateZ(5deg);
+        }
+        
+       }
+       ul{
+            display: flex;
+            /* padding: 10px; */
+        }
+        ul li{
+            text-decoration: none;
+            list-style: none;
+            /* justify-content: space-between;  */
+            padding: 10px;
+        }
+        ul li:hover{
+            list-style: none;
+            background-color: black;
+            color: white;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="mailto: yusufbarau05@gmail.com">Customer Service</a></li>
+        <li><a href="signin.html">login</a></li>
+    </ul>
+    <form  action="">
+         <h2>Sign-in</h2>
+         <label for="">Email:</label><br>
+         <input type="email" class="form-control" style="border-radius: 20px;" name="" placeholder="Enter Your Email" id="" role="alertdialog" required><br><br>
+         <label for="">Password:</label><br>
+         <input type="password" class="form-control" style="border-radius: 20px;" placeholder="Enter Your Password" name="" id="" required role="alertdialog" 
+         ><br><br>
+         <hr style="width: 40px;">
+         <p>Can't sign-in <a href="create.html">Create An Account?</a></p>
+         <a href="contact.html"><button class="btn btn-outline-primary"  style="border: 2px groove black; background-color: aquamarine; width: 60px;">Login</button></a>
+    </form>
+   
+
+</body>
+</html>

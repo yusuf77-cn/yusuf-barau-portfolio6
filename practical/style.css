@@ -1,0 +1,241 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0b0b;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo img{
+    width: 60px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: red;
+}
+
+/* BUTTON */
+.btn{
+    background: red;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #ff3c3c;
+}
+
+/* HERO */
+.hero{
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero span{
+    color: red;
+}
+
+.hero p{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* CARDS SECTION */
+.center{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 8%;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: #111;
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.card a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    border-color: red;
+}
+
+/* MAIN SECTION */
+.main{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+}
+
+.image-box{
+    flex: 1 1 400px;
+}
+
+.image-box img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.content-box{
+    flex: 1 1 400px;
+}
+
+.content-box h2{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.content-box p{
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* CTA */
+.cta{
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #111, #1a1a1a);
+}
+
+.cta h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 40px 20px;
+    background: black;
+}
+
+.socials{
+    margin-bottom: 20px;
+}
+
+.socials img{
+    width: 25px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.socials img:hover{
+    transform: scale(1.2);
+}
+
+.footer-links{
+    margin-bottom: 15px;
+}
+
+.footer-links a{
+    color: #aaa;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover{
+    color: white;
+}
+
+.copyright{
+    font-size: 12px;
+    color: #777;
+}
+
+/* ===================== */
+/* RESPONSIVE DESIGN */
+/* ===================== */
+
+/* TABLET */
+@media (max-width: 768px){
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main{
+        flex-direction: column;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px){
+    .hero h1{
+        font-size: 28px;
+    }
+
+    .hero p{
+        font-size: 14px;
+    }
+
+    .card{
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta h2{
+        font-size: 22px;
+    }
+}

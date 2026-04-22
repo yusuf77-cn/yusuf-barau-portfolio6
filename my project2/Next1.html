@@ -1,0 +1,66 @@
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+
+<style>
+    form{
+    /* animation: rock 4s infinite; */
+    width: 35%;
+    height: 250%; 
+    border-radius: 20px;
+    border: 7px solid black;
+    text-align: center;
+    margin: auto; 
+    margin-top: 25px;
+    animation: rock 4s infinite;
+}
+
+h2{
+    animation: plane 4s infinite;
+   }
+   @keyframes plane {
+   0%{
+        color: red;
+        transform: translate(-300px) rotateZ(3deg);
+    }
+    50%{
+        color: green;
+        transform: translateY(-20px) rotateZ(1deg);
+    }
+    80%{
+        color: blue;
+        transform: translateX(-10px) rotateZ(0deg);
+    }
+    100%{
+        color: goldenrod;
+        transform: translate3d(200px) rotateZ(5deg);
+    }
+    
+   }
+
+   @keyframes rock {
+    0%{
+        transform: rotate3d(-300px);
+    }
+    50%{
+        transform: translateX(-40px);
+    }
+
+   }
+</style>
+<form action="">
+    <h2>CREATE ACCOUNT</h2>
+    <label for="" >DATE OF BIRTH:</label>
+    <input type="date" name="" class="form-control" placeholder="Enter Your Email" style="border-radius: 20px;" id="">
+    <label for="" >PHONE NUMBER:</label>
+    <input type="number" name="" class="form-control" placeholder="Enter Your Password" style="border-radius: 20px;" id="">
+   <button class="btn btn-outline-primary" style="border: 2px groove black; background-color: aquamarine; width: 60px;"> <a href="">Next</a></button>
+    <a href="index.html"><button class="btn btn-outline-primary" style="border: 2px groove black; background-color: aquamarine; width: 60px;">BACK</button></a>
+    <hr style="border-radius: 30px;">
+</form>
+
